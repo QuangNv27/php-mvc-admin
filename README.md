@@ -7,9 +7,9 @@ PHP MVC Admin là một hệ thống quản lý website với giao diện Admin 
 1️⃣ Clone dự án  
  -git clone https://github.com/QuangNv27/php-mvc-admin.git
  -cd php-mvc-admin
-2️⃣ Cài đặt thư viện
+2️⃣ Cài đặt thư viện  
  -composer install
-3️⃣ Cấu hình môi trường
+3️⃣ Cấu hình môi trường  
 ```
 -Trong file .env
 -DB_HOST=localhost
@@ -17,8 +17,8 @@ PHP MVC Admin là một hệ thống quản lý website với giao diện Admin 
 -DB_USER=root
 -DB_PASSWORD=
 ```
-4️⃣ Import database
-5️⃣ Chạy dự án với Laragon hoặc XAMPP
+4️⃣ Import database  
+5️⃣ Chạy dự án với Laragon hoặc XAMPP  
 ## 🛠 Công nghệ sử dụng
 ```
 - **Ngôn ngữ**: PHP, MySQL
