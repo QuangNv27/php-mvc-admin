@@ -5,10 +5,10 @@ PHP MVC Admin là một hệ thống quản lý website với giao diện Admin 
 
 ## Cách cài đặt  
 1️⃣ Clone dự án  
- -git clone https://github.com/QuangNv27/php-mvc-admin.git
- -cd php-mvc-admin
+ -git clone https://github.com/QuangNv27/php-mvc-admin.git  
+ -cd php-mvc-admin  
 2️⃣ Cài đặt thư viện  
- -composer install
+ -composer install  
 3️⃣ Cấu hình môi trường  
 ```
 -Trong file .env
