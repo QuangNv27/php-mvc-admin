@@ -1,0 +1,72 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+ User List
+<?php $this->stopSection(); ?>
+
+<?php $this->startSection('content'); ?>
+<div class="container-fluid px-4">
+ <h1 class="mt-4">Danh sách category</h1>
+ <ol class="breadcrumb mb-4">
+ <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+ <li class="breadcrumb-item active">Danh sách</li>
+ </ol>
+ <div class="card mb-4">
+ <?php if(isset($_SESSION['msg'])): ?>
+ <div class="alert alert-<?php echo \htmlentities($_SESSION['msg']['status']??'', ENT_QUOTES, 'UTF-8', false); ?>">
+ <?php echo \htmlentities($_SESSION['msg']['message']??'', ENT_QUOTES, 'UTF-8', false); ?>
+
+ </div>
+ <?php unset($_SESSION['msg']); ?> <!-- Xóa session sau khi hiển thị -->
+ <?php endif; ?>
+ <form method="GET" action="<?php echo \htmlentities($_ENV['BASE_URL']??'', ENT_QUOTES, 'UTF-8', false); ?>admin/category">
+ <input type="text" name="search" value="<?php echo \htmlentities($search??'', ENT_QUOTES, 'UTF-8', false); ?>" placeholder="Tìm danh mục..." class="form-control" style="width: 300px; display: inline-block;">
+ <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+ <a href="<?php echo \htmlentities($_ENV['BASE_URL']??'', ENT_QUOTES, 'UTF-8', false); ?>admin/category" class="btn btn-secondary">Reset</a>
+ </form>
+ <div class="card-header">
+ <i class="fas fa-table me-1"></i>
+ DataTable Example
+ <a href="category/add" class="btn btn-success">Thêm mới</a>
+ </div>
+ <div class="card-body">
+ <table id="datatablesSimple">
+ <thead>
+ <tr>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Created At</th>
+ <th>Update At</th>
+ <th>Function</th>
+ </tr>
+ </thead>
+ <tfoot>
+ <tr>
+ <th>Name</th>
+ <th>Description</th>
+ <th>Created At</th>
+ <th>Update At</th>
+ <th>Function</th>
+ </tr>
+ </tfoot>
+ <tbody>
+ <?php $__currentLoopData = $data; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $item): $loop = $this->incrementLoopIndices();  ?>
+ <tr>
+ <th><?php echo \htmlentities($item['name']??'', ENT_QUOTES, 'UTF-8', false); ?></th>
+ <th><?php echo \htmlentities($item['description']??'', ENT_QUOTES, 'UTF-8', false); ?></th>
+ <th><?php echo \htmlentities($item['created_at']??'', ENT_QUOTES, 'UTF-8', false); ?></th>
+ <th><?php echo \htmlentities($item['updated_at']??'', ENT_QUOTES, 'UTF-8', false); ?></th>
+ <th>
+ <a href="category/edit/<?php echo \htmlentities($item['id']??'', ENT_QUOTES, 'UTF-8', false); ?>" class="btn btn-warning">Sửa</a>
+ <a href="category/delete/<?php echo \htmlentities($item['id']??'', ENT_QUOTES, 'UTF-8', false); ?>" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa?')">Xóa</a>
+ </th>
+ </tr>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </tbody>
+ </table>
+ </div>
+ </div>
+</div>
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('admin.layouts.main'); } ?>

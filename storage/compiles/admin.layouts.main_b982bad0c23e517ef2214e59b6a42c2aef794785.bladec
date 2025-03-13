@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ <meta name="description" content="" />
+ <meta name="author" content="" />
+ <title><?php echo $this->yieldContent('title','Admin Dashboard'); ?></title>
+ <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+ <link href="<?php echo \htmlentities(file_url('css/styles.css')??'', ENT_QUOTES, 'UTF-8', false); ?>" rel="stylesheet" />
+ <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+ </head>
+ <body class="sb-nav-fixed">
+ <?php echo $this->runChild('admin.layouts.partials.nav'); ?>
+ <div id="layoutSidenav">
+ <?php echo $this->runChild('admin.layouts.partials.sidebar'); ?>
+ <div id="layoutSidenav_content">
+ <main>
+ <?php echo $this->yieldContent('content'); ?>
+ </main>
+ <?php echo $this->runChild('admin.layouts.partials.footer'); ?>
+ </div>
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+ <script src="<?php echo \htmlentities(file_url('js/scripts.js')??'', ENT_QUOTES, 'UTF-8', false); ?>"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+ <script src="<?php echo \htmlentities(file_url('assets/demo/chart-area-demo.js')??'', ENT_QUOTES, 'UTF-8', false); ?>"></script>
+ <script src="<?php echo \htmlentities(file_url('assets/demo/chart-bar-demo.js')??'', ENT_QUOTES, 'UTF-8', false); ?>"></script>
+ <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+ <script src="<?php echo \htmlentities(file_url('js/datatables-simple-demo.js')??'', ENT_QUOTES, 'UTF-8', false); ?>"></script>
+ </body>
+</html>
