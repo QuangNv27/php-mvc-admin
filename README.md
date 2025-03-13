@@ -3,8 +3,8 @@
 ## 📌 Giới thiệu
 PHP MVC Admin là một hệ thống quản lý website với giao diện Admin được xây dựng theo mô hình **MVC**. Dự án này hỗ trợ quản lý người dùng, danh mục, sản phẩm và phân quyền **Admin**. Hệ thống được thiết kế với các thư viện PHP hiện đại giúp mã nguồn gọn gàng, dễ bảo trì.
 
-## Cách cài đặt
-1️⃣ Clone dự án
+## Cách cài đặt  
+1️⃣ Clone dự án  
  -git clone https://github.com/QuangNv27/php-mvc-admin.git
  -cd php-mvc-admin
 2️⃣ Cài đặt thư viện
